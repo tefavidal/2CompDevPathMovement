@@ -266,9 +266,9 @@
         i=ceiling(cells(k,1)/dx)
         j=ceiling(cells(k,2)/dy)
         grad=sqrt(xgradeC(i,j)**2 +ygradeC(i,j)**2)
-!        if(ro(i,j) .ge. 0.6 .and. grad .ge. 1.0)then
+        if(ro(i,j) .ge. 0.6 .and. grad .ge. 1.0)then
 !        if(ro(i,j) .ge. 0.4 .and. grad .ge. 1.0)then
-        if((gamma(i,j)-g0(i,j)) .gt. 0.0 .and. grad .ge. 1.0)then
+!        if((gamma(i,j)-g0(i,j)) .gt. 0.0 .and. grad .ge. 1.0)then
 !          write(6,*) 'Atempt move'
             angle=atan2(ygradeC(i,j),xgradeC(i,j))
             newx=cells(k,1)+h*speed*cos(angle)

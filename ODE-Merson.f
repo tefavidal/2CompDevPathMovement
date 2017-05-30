@@ -136,10 +136,10 @@
       t=t+h
       tau=tau+h
 
-!      call UpdateDiscreteCells(h,Nx,Ny,Nc, gamma, ro, cells,gamma0)
-!      if(t .lt. 50*dk1)then
-      call UpdateWithMemory(h,Nx,Ny,Nc, gamma, ro, cells,gamma0)
-!      endif
+      if(t .gt. 100*dk1)then
+      call UpdateDiscreteCells(h,Nx,Ny,Nc, gamma, ro, cells,gamma0)
+!      call UpdateWithMemory(h,Nx,Ny,Nc, gamma, ro, cells,gamma0)
+      endif
 
       h=dt
 
